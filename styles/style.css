@@ -1,0 +1,31 @@
+@font-face { font-family: Cousine-Bold; src: url('/assets/font/Cousine-Bold.ttf'); }
+@font-face { font-family: Cousine-Bold-Italic; src: url('/assets/font/Cousine-BoldItalic.ttf'); }
+@font-face { font-family: Cousine-Italic; src: url('/assets/font/Cousine-Italic.ttf'); }
+@font-face { font-family: Cousine-Regular; src: url('/assets/font/Cousine-Regular.ttf'); }
+
+* {
+	margin: 0;
+}
+
+html {
+	background-color: #FFFAF5;
+}
+
+h1, h2 ,p {
+	font-family: Cousine-Regular;
+	color: #FFFAF5;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+p {
+	font-size: 20px;
+}
+
+
