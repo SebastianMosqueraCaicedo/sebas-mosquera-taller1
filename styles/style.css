@@ -1,7 +1,7 @@
-@font-face { font-family: Cousine-Bold; src: url('/assets/font/Cousine-Bold.ttf'); }
-@font-face { font-family: Cousine-Bold-Italic; src: url('/assets/font/Cousine-BoldItalic.ttf'); }
-@font-face { font-family: Cousine-Italic; src: url('/assets/font/Cousine-Italic.ttf'); }
-@font-face { font-family: Cousine-Regular; src: url('/assets/font/Cousine-Regular.ttf'); }
+@font-face { font-family: Cousine-Bold; src: url('../assets/font/Cousine-Bold.ttf'); }
+@font-face { font-family: Cousine-Bold-Italic; src: url('../assets/font/Cousine-BoldItalic.ttf'); }
+@font-face { font-family: Cousine-Italic; src: url('../assets/font/Cousine-Italic.ttf'); }
+@font-face { font-family: Cousine-Regular; src: url('../assets/font/Cousine-Regular.ttf'); }
 
 * {
 	margin: 0;
