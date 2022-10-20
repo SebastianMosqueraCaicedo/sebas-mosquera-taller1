@@ -18,7 +18,8 @@
 		"politic": "Far-left",
 		"movement": "Hyper influencers",
 		"country": "USEA",
-		"image": ""
+		"image": ["./assets/img/man1.png"],
+		"song": "./assets/aud/like.mp3"
 	},
 	{
 		"name": "Man 41",
@@ -38,7 +39,8 @@
 		"politic": "Conservative",
 		"movement": "Serial killers",
 		"country": "USWA",
-		"image": ""
+		"image": ["./assets/img/man41.png"],
+		"song": "./assets/aud/ambatta.mp3"
 	},
 	{
 		"name": "Man 6",
@@ -58,7 +60,8 @@
 		"politic": "Centrist",
 		"movement": "Serial killers",
 		"country": "Old ireland",
-		"image": ""
+		"image": ["./assets/img/man6.png"],
+		"song": "./assets/aud/ikill.mp3"
 	},
 	{
 		"name": "Man 15",
@@ -78,7 +81,8 @@
 		"politic": "Libertarian",
 		"movement": "Neo-Vegans",
 		"country": "USWA",
-		"image": ""
+		"image": ["./assets/img/weedEat.png"],
+		"song": "./assets/aud/goat.mp3"
 	},
 	{
 		"name": "Man 27",
@@ -98,7 +102,8 @@
 		"politic": "None",
 		"movement": "Neo-Vegans",
 		"country": "India",
-		"image": ""
+		"image": ["./assets/img/man27.png"],
+		"song": "./assets/aud/rock.mp3"
 	},
 	{
 		"name": "Man A",
@@ -118,7 +123,8 @@
 		"politic": "Far-right",
 		"movement": "Serial killers",
 		"country": "USWA",
-		"image": ""
+		"image": ["./assets/img/manA.png"],
+		"song": "./assets/aud/candy.mp3"
 	},
 	{
 		"name": "Man E3",
@@ -138,7 +144,10 @@
 		"politic": "Far-right",
 		"movement": "Gamers",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/gamer.jpg", 
+			"./assets/img/gamer2.jpg",
+			"./assets/vid/gamer.gif"],
+		"song": "./assets/aud/mental.mp3"
 	},
 	{
 		"name": "Man B8",
@@ -158,7 +167,9 @@
 		"politic": "Republican",
 		"movement": "ADHDers",
 		"country": "Spain",
-		"image": ""
+		"image": ["./assets/img/clean.jpg", 
+			"./assets/img/clean2.jpg"],
+		"song": "./assets/aud/spot.mp3"
 	},
 	{
 		"name": "Man 21",
@@ -178,7 +189,10 @@
 		"politic": "Libertarian",
 		"movement": "Serial killers",
 		"country": "USEA",
-		"image": ""
+		"image": ["./assets/img/mogus.png", 
+			"./assets/img/mogus2.jpg",
+			"./assets/vid/mogus.gif"],
+		"song": "./assets/aud/drip.mp3"
 	},
 	{
 		"name": "Jeremy Elbertson",
@@ -198,7 +212,10 @@
 		"politic": "Democrat",
 		"movement": "ADHDers",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/jerm.jpg", 
+			"./assets/img/jerm2.jpg",
+			"./assets/vid/jerm.gif"],
+		"song": "./assets/aud/halal.mp3"
 	},
 	{
 		"name": "Martin Luther King",
@@ -218,7 +235,10 @@
 		"politic": "Libertarian",
 		"movement": "Civil Rights",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/mlk.png", 
+			"./assets/img/mlk2.jpg",
+			"./assets/img/mlk3.webp"],
+		"song": "./assets/aud/organ.mp3"
 	},
 	{
 		"name": "Charlie Chaplin",
@@ -238,7 +258,10 @@
 		"politic": "Libertarian",
 		"movement": "Actors",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/chaplin.png", 
+			"./assets/img/chaplin2.jpg",
+			"./assets/img/chaplin3.jpg"],
+		"song": "./assets/aud/boab.mp3"
 	},
 	{
 		"name": "Adolph Hitler",
@@ -258,7 +281,10 @@
 		"politic": "Far-right",
 		"movement": "Dictators",
 		"country": "Germany",
-		"image": ""
+		"image": ["./assets/img/loser2.jpg", 
+			"./assets/img/loser3.jpg",
+			"./assets/img/loser.jpg"],
+		"song": "./assets/aud/germ.mp3"
 	},
 	{
 		"name": "John Fitzgerald Kennedy",
@@ -278,7 +304,10 @@
 		"politic": "Democrat",
 		"movement": "Presidents",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/jfk.png", 
+			"./assets/img/jfk2.png",
+			"./assets/img/jfk3.jpg"],
+		"song": "./assets/aud/jfk.mp3"
 	},
 	{
 		"name": "Xi Jinping",
@@ -298,7 +327,10 @@
 		"politic": "Comunist",
 		"movement": "Dictators",
 		"country": "China",
-		"image": ""
+		"image": ["./assets/img/xi.jpg", 
+			"./assets/img/xi3.png",
+			"./assets/img/xi3.jpg"],
+		"song": "./assets/aud/china.mp3"
 	},
 	{
 		"name": "John Felix Anthony",
@@ -318,7 +350,11 @@
 		"politic": "Comunist",
 		"movement": "Hyper influencers",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/cena.jpg", 
+			"./assets/img/cena2.jpg",
+			"./assets/img/cena3.jpg",
+			"./assets/vid/cena.gif"],
+		"song": "./assets/aud/chick.mp3"
 	},
 	{
 		"name": "Michael Joseph Jackson",
@@ -338,7 +374,11 @@
 		"politic": "Libertarian",
 		"movement": "Hyper influencers",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/mj.jpg", 
+			"./assets/img/mj2.jpg",
+			"./assets/img/mj3.jpg",
+			"./assets/vid/mj2009.gif"],
+		"song": "./assets/aud/jeff.mp3"
 	},
 	{
 		"name": "Donald John Trump",
@@ -358,7 +398,11 @@
 		"politic": "Conservative",
 		"movement": "Presidents",
 		"country": "USA",
-		"image": ""
+		"image": ["./assets/img/trump.jpg", 
+			"./assets/img/trump2.jpg",
+			"./assets/img/trump3.jpg",
+			"./assets/vid/trump.gif"],
+		"song": "./assets/aud/yeal.mp3"
 	},
 	{
 		"name": "Oogie",
@@ -378,7 +422,9 @@
 		"politic": "None",
 		"movement": "Dictators",
 		"country": "China",
-		"image": ""
+		"image": ["./assets/img/oog.jpg", 
+			"./assets/img/oog2.jpg"],
+		"song": "./assets/aud/papaguna.mp3"
 	},
 	{
 		"name": "Gian Carlos",
@@ -398,7 +444,9 @@
 		"politic": "None",
 		"movement": "Neo-Vegans",
 		"country": "Spain",
-		"image": ""
+		"image": ["./assets/img/mush.jpg", 
+			"./assets/img/mush2.png",
+			"./assets/vid/mush.gif"],
+		"song": "./assets/aud/fung.mp3"
 	}
-
 ]
