@@ -125,6 +125,10 @@ button {
 	margin-right: 10px;
 }
 
+.tag-end-left {
+	margin-left: 10px;
+}
+
 .border-white {
 	border: 1px solid #FFFAF5;
 }
@@ -171,18 +175,22 @@ button {
 
 .main-home::before {
 	content: url('../assets/ico/home.png');
+	margin-right: 10px;
 }
 
 .main-you::before {
 	content: url('../assets/ico/you.png');
+	margin-right: 10px;
 }
 
 .main-shop::before {
 	content: url('../assets/ico/shop.png');
+	margin-right: 10px;
 }
 
 .main-cart::before {
 	content: url('../assets/ico/cart.png');
+	margin-right: 10px;
 }
 
 .main-search {
