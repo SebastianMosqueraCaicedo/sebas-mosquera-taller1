@@ -21,9 +21,6 @@ header {
 	background-color: #0D0A0A;
 	color: #0D0A0A;
 	height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 h1, h2 ,p {
@@ -50,14 +47,15 @@ li {
 }
 
 textArea {
+	width: 380px;
 	font-family: Cousine-Regular;
 	font-weight: normal;
+	font-size: 20px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	padding-left: 25px;
 	color: #FFFAF5;
-	font-size: 20px;
 	background-color: #333333;
-
 }
 
 textArea::placeholder {
@@ -75,14 +73,86 @@ button {
 
 }
 
+
+/* general styling*/
+.flex-center {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+
 .bold {
 	font-family: Cousine-Bold;
 }
 
+.important {
+	text-decoration: underline;
+	font-family: Cousine-Bold;
+}
+
+.font-small {
+	font-size: 14px;
+}
+
+/* items*/
+.check-small {
+	appearance: unset;
+	height: 15px;
+	width: 15px;
+	color: #FFFAF5;
+	background-color: #333333;
+}
+
+/* etc margins*/
+.title-end {
+	margin-bottom: 30px;
+}
+
+.section-end {
+	margin-bottom: 20px;
+}
+
+.normal-end {
+	margin-bottom: 10px;
+}
+
+.left-end {
+	margin-left: 25px;
+}
+
+.tag-end {
+	margin-right: 10px;
+}
+
+.border-white {
+	border: 1px solid #FFFAF5;
+}
+
+/* color palette*/
+.blue {
+	background-color: #193E54;
+	color: #193E54;
+}
+
+.gray {
+	background-color: #1C1C1C;
+	color: #1C1C1C;
+}
+
+.white {
+	background-color: #FFFAF5;
+	color: #FFFAF5;
+}
+
+.black {
+	background-color: #0D0A0A;
+}
+
+
+/* navigation bar and header*/
 .main-nav {
-	display: flex;
 	justify-items: start;
-	align-items: center;
 }
 
 .main-title {
@@ -91,33 +161,28 @@ button {
 
 .main-list {
 	padding: 0px;
-	display: flex;
 	justify-items: start;
-	align-items: center;
 	margin-right: 110px;
 }
 
+/* could use some animations here...*/
 .main-home .main-you .main-shop .main-cart {
 }
 
 .main-home::before {
 	content: url('../assets/ico/home.png');
-	margin-right: 10px;
 }
 
 .main-you::before {
 	content: url('../assets/ico/you.png');
-	margin-right: 10px;
 }
 
 .main-shop::before {
 	content: url('../assets/ico/shop.png');
-	margin-right: 10px;
 }
 
 .main-cart::before {
 	content: url('../assets/ico/cart.png');
-	margin-right: 10px;
 }
 
 .main-search {
@@ -125,7 +190,6 @@ button {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	height: 40%;
-	width: 380px;
 	border: none;
 }
 
@@ -133,10 +197,10 @@ button {
 	padding: 8px;
 	height: 40%;
 	border: none;
-	margin-left: 25px;
 }
 
 
+/* first section landing page*/
 .first-section-landing {
 	width: 100%;
 	display: flex;
@@ -150,17 +214,11 @@ button {
 .side-section {
 	width: 49%;
 	display: flex;
+	flex-direction: column;
 }
 
 .side-section-landing {
 	height: 48%;
 	padding: 10%;
-}
-
-.blue {
-	background-color: #193E54;
-}
-
-.gray {
-	background-color: #1C1C1C;
+	padding-right: 15%;
 }

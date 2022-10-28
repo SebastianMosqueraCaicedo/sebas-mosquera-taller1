@@ -10,35 +10,52 @@
 
  </head>
  <body>
-	 <header>
+	 <header class="flex-center">
 
-		 <nav class="main-nav">
+		 <nav class="main-nav flex-center">
 			 <h2 class="main-title">TStore</h2>
-			 <menu class="main-list">
+			 <menu class="main-list flex-center">
 				 <li>
-					 <p class="main-home">HOME</p>
+					 <p class="main-home tag-end">HOME</p>
 				 </li>
 				 <li> 
-					 <p class="main-you">YOU</p>
+					 <p class="main-you tag-end">YOU</p>
 				 </li>
 				 <li>
-					 <p class="main-shop">SHOP</p>
+					 <p class="main-shop tag-end">SHOP</p>
 				 </li>
 				 <li>
-					 <p class="main-cart">CART</p>
+					 <p class="main-cart tag-end">CART</p>
 				 </li>
 			 </menu>
-			 <textArea class="main-search" id="main-search" rows="1" 
-				 maxlength="30" placeholder="Name, Location or Event..."></textArea>
-			 <button class="main-button" id="main-button" type="button">SEARCH</button>
+			 <textArea class="main-search" id="main-search" rows="1" maxlength="30" placeholder="Name, Location or Event..."></textArea>
+			 <button class="main-button left-end" id="main-button" type="button">SEARCH</button>
 		 </nav>
 
 	 </header>
 	 <section class="first-section-landing">
 		 <img class="hero" src="./assets/img/hero.png"></img>
 		 <section class="side-section">
-			 <article class="side-section-landing blue"><p>testing</p></article>
-			 <article class="side-section-landing gray"><p>testing</p></article>
+			 <article class="side-section-landing blue" "flex-center">
+				 <section>
+					 <h2 class="title-end">Your very <span class="bold">OWN</span> historical figure</h2>
+					 <p>Through the wonders of genetical engineering, we have cloned various famous people from the past and they could be yours!<span class="bold"> (for whatever reasons)</span></p>
+				 </section>
+			 </article>
+			 <article class="side-section-landing gray flex-center">
+				 <section class="section-end">
+					 <p class="normal-end bold">¿Want someone in particular?</p>
+					 <p>Join our subscription program and submit your own!</p>
+				 </section>
+				 <section class="flex-center normal-end">
+					 <textArea class="border-white" id="email-form" rows="1" maxlength="200" placeholder="E-mail address..."></textArea>
+					 <button class="border-white left-end" id="email-button" type="button">SUBMIT</button>
+				 </section>
+				 <section class="flex-center">
+					 <input class= "tag-end check-small border-white"type="checkbox" id="email-terms">
+					 <p class="font-small"> I AGREE TO THE <span class="important">TERMS AND CONDITIONS</span></p>
+				 </section>
+			 </article>
 		 </section>
 	 </section>
 	 <footer>
