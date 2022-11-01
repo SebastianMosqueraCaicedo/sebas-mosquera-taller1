@@ -23,7 +23,7 @@ header {
 	height: 100px;
 }
 
-h1, h2 ,p {
+h1, h2 ,p, textArea, button {
 	font-family: Cousine-Regular;
 	font-weight: normal;
 	color: #FFFAF5;
@@ -37,7 +37,7 @@ h2 {
 	font-size: 36px;
 }
 
-p {
+p, textArea, button {
 	font-size: 20px;
 }
 
@@ -52,13 +52,9 @@ a {
 
 textArea {
 	width: 380px;
-	font-family: Cousine-Regular;
-	font-weight: normal;
-	font-size: 20px;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	padding-left: 25px;
-	color: #FFFAF5;
 	background-color: #333333;
 }
 
@@ -67,14 +63,16 @@ textArea::placeholder {
 }
 
 button {
-	font-family: Cousine-Regular;
-	font-weight: normal;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	color: #FFFAF5;
-	font-size: 20px;
 	background-color: #333333;
+	height: 40px;
 
+}
+
+button:active {
+	background-color: #0F0C0C;
+	border: 1px solid #FFFAF5;
 }
 
 input[type=checkbox]:checked {
@@ -88,6 +86,20 @@ input[type=checkbox]:checked {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
+	align-items: center;
+}
+
+.justify-start {
+	justify-items: start;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-straight {
+	display: flex;
 	align-items: center;
 }
 
@@ -162,19 +174,23 @@ input[type=checkbox]:checked {
 	background-color: #0D0A0A;
 }
 
-
-/* navigation bar and header*/
-.main-nav {
-	justify-items: start;
+.black-text {
+	color: #0D0A0A;
 }
 
+.red {
+	background-color: #e61113;
+	color: #e61113;
+}
+
+
+/* navigation bar and header*/
 .main-title {
 	margin-right: 75px;
 }
 
 .main-list {
 	padding: 0px;
-	justify-items: start;
 	margin-right: 110px;
 }
 
@@ -238,4 +254,13 @@ input[type=checkbox]:checked {
 	height: 48%;
 	padding: 10%;
 	padding-right: 15%;
+}
+
+
+/* store page*/
+
+.top-section-store {
+	height: 140px;
+	padding-top: 50px;
+	padding-left: 20px; 
 }
