@@ -1,0 +1,33 @@
+Tstore: In order of priority
+
+1- Finish landing page
+ a- Do second section (fetches products by rating)
+ b- Do third section (caroussel of random articles)
+ c- Add functioning sign up in hero
+
+2- Finish store page
+ a- Populate items with json file (Title, price, description, stock)
+ b- Search bar filters items
+ c- Filters filter items too
+ d- Clicking on an items sends to the respective item page
+
+3- Finish item page
+ a- Populate item attributes (Title, nick, gen, price, desc, long desc, sizes, rating, 
+danger, needs, clone lifespan, real lifespan, location, movement)
+ b- Order the page properly (Allow for scroll in the item attribute section)
+ c- Allow selection of several images
+ d- Play respective song
+ e- If logged in, add item to cart when hitting the button. If not, login
+
+4- Add sign / log in page, accessible from home, header, cart and item.
+ a- The created user is added to the database list
+ b- Log in checks database for user
+
+5- Add cart page
+ a- Locally remembers the items added by user. (buying is fake)
+ b- Items can be removed
+
+6- Add admin page
+ a- Admin verification using sign and log, with an extra step (code)
+ b- New items can be added
+ c- Old items are listed and can be modified / removed
