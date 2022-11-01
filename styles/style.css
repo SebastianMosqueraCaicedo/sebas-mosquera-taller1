@@ -107,6 +107,14 @@ input[type=checkbox]:checked {
 	align-items: center;
 }
 
+.aside-left {
+	float: left;
+}
+
+.aside-right {
+	float: right;
+}
+
 .bold {
 	font-family: Cousine-Bold;
 }
@@ -261,17 +269,35 @@ input[type=checkbox]:checked {
 }
 
 
-/* store page*/
-
-.top-section-store {
+/* shop page*/
+.top-section-shop {
 	height: 140px;
 	padding-top: 50px;
 	padding-left: 20px; 
 }
 
-.sidebar-store {
+.sidebar-shop {
 	width: 20%;
-	float: left;
+	height: 800px;
 	padding-top: 50px;
 	padding-left: 25px; 
+}
+
+.item-grid-shop {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 5%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item-article-shop {
+	width: 620px;
+	height: 250px;
+	margin-right: 20px;
+}
+
+.item-desc-shop {
+	padding: 20px;
+	padding-right: 2px;
 }
