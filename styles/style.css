@@ -46,6 +46,10 @@ li {
 	margin-right: 45px;
 }
 
+a {
+	text-decoration: none;
+}
+
 textArea {
 	width: 380px;
 	font-family: Cousine-Regular;
@@ -71,6 +75,11 @@ button {
 	font-size: 20px;
 	background-color: #333333;
 
+}
+
+input[type=checkbox]:checked {
+	color: #FFaaaa;
+	background-color: #FFaaaa;
 }
 
 
