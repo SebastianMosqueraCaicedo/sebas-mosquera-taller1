@@ -23,6 +23,10 @@ header {
 	height: 100px;
 }
 
+menu {
+	padding: 0px;
+}
+
 h1, h2 ,p, textArea, button {
 	font-family: Cousine-Regular;
 	font-weight: normal;
@@ -263,4 +267,11 @@ input[type=checkbox]:checked {
 	height: 140px;
 	padding-top: 50px;
 	padding-left: 20px; 
+}
+
+.sidebar-store {
+	width: 20%;
+	float: left;
+	padding-top: 50px;
+	padding-left: 25px; 
 }
