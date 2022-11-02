@@ -30,6 +30,23 @@
 	 <section class="sidebar-shop gray aside-left">
 		 <menu class="title-end" id="price-filters">
 			 <h1>PRICE</h1>
+			 <div class="section-end"></div>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Unit Price Range</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <textArea class="tag-end filter-search" id="pr-min" rows="1" cols="4" maxlength="5" placeholder="Min"></textArea>
+					 <p class="tag-end"> - </p>
+					 <textArea class="filter-search" id="pr-max" rows="1" cols="4" maxlength="5" placeholder="Max"></textArea>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Average Maintainance</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <textArea class="tag-end filter-search" id="ma-min" rows="1" cols="4" maxlength="3" placeholder="Min"></textArea>
+					 <p class="tag-end"> - </p>
+					 <textArea class="filter-search" id="ma-max" rows="1" cols="4" maxlength="3" placeholder="Max"></textArea>
+				 </section>
+			 </li>
 		 </menu>
 		 <menu class="title-end">
 			 <h1>DATE</h1>
@@ -67,9 +84,95 @@
 		 </menu>
 		 <menu class="title-end">
 			 <h1>RELATIONS</h1>
+			 <div class="section-end"></div>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Political Orientation</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="politic-list">
+						 <option value="">...</option>
+						 <option value="Far-left">Far-left</option>
+						 <option value="Conservative">Conservative</option>
+						 <option value="Centrist">Centrist</option>
+						 <option value="Libertarian">Libertarian</option>
+						 <option value="None">None</option>
+						 <option value="Far-right">Far-right</option>
+						 <option value="Republican">Republican</option>
+						 <option value="Democrat">Democrat</option>
+						 <option value="Comunist">Comunist</option>
+					 </select>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Movement Affiliation</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="movement-list">
+						 <option value="">...</option>
+						 <option value="Hyper influencers">Hyper influencers</option>
+						 <option value="Serial killers">Serial killers</option>
+						 <option value="Neo-Vegans">Neo-Vegans</option>
+						 <option value="Dictators">Dictators</option>
+						 <option value="Presidents">Presidents</option>
+						 <option value="Actors">Actors</option>
+						 <option value="Civil Rights">Civil Rights</option>
+						 <option value="ADHDers">ADHDers</option>
+						 <option value="Gamers">Gamers</option>
+					 </select>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Country of Influence</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="country-list">
+						 <option value="">...</option>
+						 <option value="USEA">USEA</option>
+						 <option value="USWA">USWA</option>
+						 <option value="Old ireland">Old ireland</option>
+						 <option value="India">India</option>
+						 <option value="USA">USA</option>
+						 <option value="Spain">Spain</option>
+						 <option value="Germany">Germany</option>
+						 <option value="China">China</option>
+					 </select>
+				 </section>
+			 </li>
 		 </menu>
 		 <menu class="title-end">
 			 <h1>ATTRIBUTES</h1>
+			 <div class="section-end"></div>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Clone Size</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="size-list">
+						 <option value="">...</option>
+						 <option value="tiny">Tiny</option>
+						 <option value="little">Little</option>
+						 <option value="small">Small</option>
+					 </select>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Clone Generation</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="gen-list">
+						 <option value="">...</option>
+						 <option value="1">G1</option>
+						 <option value="2">G2</option>
+						 <option value="3">G3</option>
+						 <option value="4">G4</option>
+						 <option value="5">G5</option>
+						 <option value="6">G6</option>
+						 <option value="7">G7</option>
+						 <option value="8">G8</option>
+						 <option value="9">G9</option>
+					 </select>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Danger</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <input type="range" id="danger-list" min="0" max="100" step="any" />
+				 </section>
+			 </li>
 		 </menu>
 	 </section>
 	 <section>
