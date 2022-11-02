@@ -2,18 +2,109 @@
 const items = require('../items.json');
 console.log(items + "shiz");
 */
-let items
+let items, itemsFilter, searchQuery;
+let order = {
+	relevance: false,
+	ratings: false,
+	cheaper: false,
+	expensive: false,
+	popularity: false
+};
 
-fetch("../items.json")
-.then(response => {
-	   return response.json();
-})
-.then(data => {
-	items = data;
-	updateItems()});
+let searchArea = document.getElementById('main-search');
+
+// there might be a better way to do this
+orderItems = function(value) {
+	switch (value){
+		case 0:
+			order = {
+				relevance: true,
+				ratings: false,
+				cheaper: false,
+				expensive: false,
+				popularity: false
+			};
+			// change button to active
+		break;
+
+		case 1:
+			order = {
+				relevance: false,
+				ratings: true,
+				cheaper: false,
+				expensive: false,
+				popularity: false
+			};
+			// change button to active
+		break;
+
+		case 2:
+			order = {
+				relevance: false,
+				ratings: false,
+				cheaper: true,
+				expensive: false,
+				popularity: false
+			};
+			// change button to active
+		break;
+
+		case 3:
+			order = {
+				relevance: false,
+				ratings: false,
+				cheaper: false,
+				expensive: true,
+				popularity: false
+			};
+			// change button to active
+		break;
+
+		case 4:
+			order = {
+				relevance: false,
+				ratings: false,
+				cheaper: false,
+				expensive: false,
+				popularity: true 
+			};
+			// change button to active
+		break;
+	}
+}
+
+restartItems = function() {
+	itemsFilter = items;
+	updateItems();
+	searchArea.value = '';
+	searchedText.textContent = "NONE";
+}
+
+searchItems = function() {
+	searchQuery = searchArea.value;
+	const searchedItems= items.filter((el) => {
+		if(el.name.toLowerCase().includes(searchQuery.toLowerCase())
+		|| el.longDescription.toLowerCase().includes(searchQuery.toLowerCase())
+		|| el.period.toLowerCase().includes(searchQuery.toLowerCase())
+		|| el.movement.toLowerCase().includes(searchQuery.toLowerCase())
+		|| el.country.toLowerCase().includes(searchQuery.toLowerCase())){
+			return true;
+		} else {
+			return false;
+		}
+	});
+	itemsFilter = searchedItems;
+	searchedText.textContent = "< " + searchQuery + " >";
+	updateItems();
+}
 
 updateItems = function () {
 	const grid = document.getElementById('grid-shop');
+
+	// clear previous items
+	while (grid.firstChild){
+		grid.removeChild(grid.firstChild);
+	}
 	/*
 	let text = document.createElement("p");
 	text.setAttribute("class","black bold");
@@ -22,45 +113,78 @@ updateItems = function () {
 	*/
 	
 	//  iterator for every item
-	for (let j = 0; j < items.length; j++){
+	for (let j = 0; j < itemsFilter.length; j++){
 		let article = document.createElement("article");
 		article.setAttribute("class", "item-article-shop black section-end flex-straight");
 
 		let img = document.createElement("img");
 
 		// all of this to change path
-		let imgPath = items[j].image[0];
+		let imgPath = itemsFilter[j].image[0];
 		let imgPathArray = Array.from(imgPath);
 		imgPathArray.unshift('.');
 		let imgPathFinal = imgPathArray.join('')
 
 		img.setAttribute("src", imgPathFinal);
-		img.setAttribute("heigth", "250px");
-		img.setAttribute("width", "45%");
 		article.append(img);
+		img.setAttribute("heigth", "100%");
+		img.setAttribute("width", "45%");
 
 		let section = document.createElement("section");
 		section.setAttribute("class", "side-section item-desc-shop");
 
 		let name = document.createElement("h2");
 		name.setAttribute("class", "section-end");
-		name.textContent = items[j].name;
+		name.textContent = itemsFilter[j].name;
 		section.append(name);
 
 		let price = document.createElement("p");
 		price.setAttribute("class", "bold normal-end");
-		price.textContent = '$' + items[j].price +
-			' USD - Stock: ' + items[j].stock;
+		price.textContent = '$' + itemsFilter[j].price +
+			' USD - Stock: ' + itemsFilter[j].stock;
 		section.append(price);
 
 		let desc = document.createElement("p");
-		desc.textContent = items[j].shortDescription;
+		desc.textContent = itemsFilter[j].shortDescription;
 		section.append(desc);
 
 		article.append(section);
 
 		grid.append(article);
 	}
-	console.log(items);
 }
+
+let searchedText = document.getElementById('searched-text');
+
+let searchButton = document.getElementById('main-button');
+searchButton.addEventListener("click", searchItems, {once: false});
+
+let relevanceButton = document.getElementById('relevance-button');
+relevanceButton.addEventListener('click', orderItems(0), {once: false});
+
+let ratingsButton = document.getElementById('ratings-button');
+ratingsButton.addEventListener('click', orderItems(1), {once: false});
+
+let cheaperButton = document.getElementById('cheaper-button');
+cheaperButton.addEventListener('click', orderItems(2), {once: false});
+
+let expensiveButton = document.getElementById('expensive-button');
+expensiveButton.addEventListener('click', orderItems(3), {once: false});
+
+let popularityButton = document.getElementById('popularity-button');
+popularityButton.addEventListener('click', orderItems(4), {once: false});
+
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', restartItems, {once: false});
+
+// get the products from the json array
+fetch("../items.json")
+.then(response => {
+	   return response.json();
+})
+.then(data => {
+	items = data;
+	itemsFilter = items;
+	updateItems();
+});
 
