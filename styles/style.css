@@ -27,7 +27,7 @@ menu {
 	padding: 0px;
 }
 
-h1, h2 ,p, textArea, button {
+h1, h2 ,p, textArea, button, select {
 	font-family: Cousine-Regular;
 	font-weight: normal;
 	color: #FFFAF5;
@@ -41,7 +41,7 @@ h2 {
 	font-size: 36px;
 }
 
-p, textArea, button {
+p, textArea, button, select {
 	font-size: 20px;
 }
 
@@ -71,12 +71,15 @@ button {
 	padding-bottom: 8px;
 	background-color: #333333;
 	height: 40px;
-
 }
 
 button:active {
 	background-color: #0F0C0C;
 	border: 1px solid #FFFAF5;
+}
+
+select {
+	background-color: #333333;
 }
 
 input[type=checkbox]:checked {
@@ -301,3 +304,12 @@ input[type=checkbox]:checked {
 	padding: 20px;
 	padding-right: 2px;
 }
+
+.filter-search {
+	width: unset;
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+}
+

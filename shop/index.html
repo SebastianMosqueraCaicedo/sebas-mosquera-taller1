@@ -28,21 +28,58 @@
 
 	 </header>
 	 <section class="sidebar-shop gray aside-left">
-		 <menu>
-			 <li class="title-end"><h1>PRICE</h1></li>
-			 <li class="title-end"><h1>DATE</h1></li>
-			 <li class="title-end"><h1>RELATIONS</h1></li>
-			 <li class="title-end"><h1>ATTRIBUTES</h1></li>
+		 <menu class="title-end" id="price-filters">
+			 <h1>PRICE</h1>
+		 </menu>
+		 <menu class="title-end">
+			 <h1>DATE</h1>
+			 <div class="section-end"></div>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Original Life Range</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <textArea class="tag-end filter-search" id="og-min" rows="1" cols="4" maxlength="4" placeholder="Min"></textArea>
+					 <p class="tag-end"> - </p>
+					 <textArea class="filter-search" id="og-max" rows="1" cols="4" maxlength="4" placeholder="Max"></textArea>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Clone Life Range</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <textArea class="tag-end filter-search" id="cl-min" rows="1" cols="4" maxlength="4" placeholder="Min"></textArea>
+					 <p class="tag-end"> - </p>
+					 <textArea class="filter-search" id="cl-max" rows="1" cols="4" maxlength="4" placeholder="Max"></textArea>
+				 </section>
+			 </li>
+			 <li style="padding-left: 10px;">
+				 <p class="normal-end bold">Main Historic Period</p>
+				 <section class="tag-end-left flex-straight section-end">
+					 <select id="period-list">
+						 <option value="">...</option>
+						 <option value="Great pandemic">Great pandemic</option>
+						 <option value="The web merge">The web merge</option>
+						 <option value="The 1000 walks">The 1000 walks</option>
+						 <option value="Chinese unification">Chinese unification</option>
+						 <option value="American era">American era</option>
+						 <option value="XX wars">XX wars</option>
+					 </select>
+				 </section>
+			 </li>
+		 </menu>
+		 <menu class="title-end">
+			 <h1>RELATIONS</h1>
+		 </menu>
+		 <menu class="title-end">
+			 <h1>ATTRIBUTES</h1>
 		 </menu>
 	 </section>
 	 <section>
 		 <section class="top-section-shop red justify-start flex-column">
-			 <article class="flex-straight">
-				 <h1 class="black-text section-end">Search results for: </h1>
-				 <p class="bold normal-end" id="searched-text">NONE</p>
+			 <article class="flex-straight section-end">
+				 <h1 class="black-text">Search results for: </h1>
+				 <h2 class="bold" id="searched-text">NONE</h2>
 			 </article>
 			 <article class="flex-straight">
-				 <p class="bold small-text black-text">SORT BY:</p>
+				 <p class="small-text black-text important">SORT BY:</p>
 				 <button class="left-end" id="relevance-button" 
 					 type="button">RELEVANCE</button>
 				 <button class="left-end" id="ratings-button" 
@@ -58,14 +95,6 @@
 			 </article>
 		 </section>
 		 <section class="item-grid-shop" id="grid-shop">
-			 <article class="item-article-shop black section-end flex-straight">
-				 <img src="../assets/img/man1.png" height="100%" width="45%">
-				 <section class="side-section item-desc-shop">
-					 <h2 class="section-end">MAN 1</h2>
-					 <p class="bold normal-end">$4009.22 USD - Stock: 22</p>
-					 <p>Description, this is the one and only Man 1, he is known for nothing really. Still cloned him</p>
-				 </section>
-			 </article>
 		 </section>
 	 </section>
 	 <footer>
