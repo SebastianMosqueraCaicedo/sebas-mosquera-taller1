@@ -11,6 +11,20 @@ let order = {
 	popularity: false
 };
 
+let filters = {
+	price: undefined,
+	maintainance: undefined,
+	originalLife: undefined,
+	cloneLife: undefined,
+	period: undefined,
+	politic: undefined,
+	movement: undefined,
+	country: undefined,
+	sizes: undefined,
+	gen: undefined,
+	danger: undefined
+};
+
 let searchArea = document.getElementById('main-search');
 
 // there might be a better way to do this
@@ -84,6 +98,7 @@ searchItems = function() {
 	searchQuery = searchArea.value;
 	const searchedItems= items.filter((el) => {
 		if(el.name.toLowerCase().includes(searchQuery.toLowerCase())
+		|| el.nick.toLowerCase().includes(searchQuery.toLowerCase())
 		|| el.longDescription.toLowerCase().includes(searchQuery.toLowerCase())
 		|| el.period.toLowerCase().includes(searchQuery.toLowerCase())
 		|| el.movement.toLowerCase().includes(searchQuery.toLowerCase())
@@ -96,6 +111,26 @@ searchItems = function() {
 	itemsFilter = searchedItems;
 	searchedText.textContent = "< " + searchQuery + " >";
 	updateItems();
+}
+
+filterItems = function() {
+	filters = {
+		price: [document.getElementById('pr-min').value,
+			document.getElementById('pr-max').value],
+		maintainance: [document.getElementById('ma-min').value,
+			document.getElementById('ma-max').value],
+		originalLife: [document.getElementById('og-min').value,
+			document.getElementById('og-max').value],
+		cloneLife: [document.getElementById('cl-min').value,
+			document.getElementById('cl-max').value],
+		period: document.getElementById('period-list').value,
+		politic: document.getElementById('politic-list').value,
+		movement: document.getElementById('movement-list').value,
+		country: document.getElementById('country-list').value,
+		sizes: document.getElementById('size-list').value,
+		gen: document.getElementById('gen-list').value,
+		danger: document.getElementById('danger-list').value
+	};
 }
 
 updateItems = function () {
@@ -176,6 +211,9 @@ popularityButton.addEventListener('click', orderItems(4), {once: false});
 
 let resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', restartItems, {once: false});
+
+let filterButton = document.getElementById('filter-button');
+filterButton.addEventListener('click', filterItems, {once: false});
 
 // get the products from the json array
 fetch("../items.json")
