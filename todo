@@ -6,8 +6,8 @@ Tstore: In order of priority
  c- Add functioning sign up in hero
 
 2- Finish store page
- a- Populate items with json file (Title, price, description, stock)
- b- Search bar filters items
+ DONE a- Populate items with json file (Title, price, description, stock)
+ DONE b- Search bar filters items
  c- Filters filter items too
  d- Clicking on an items sends to the respective item page
 

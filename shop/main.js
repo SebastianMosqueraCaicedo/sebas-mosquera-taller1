@@ -131,6 +131,165 @@ filterItems = function() {
 		gen: document.getElementById('gen-list').value,
 		danger: document.getElementById('danger-list').value
 	};
+	let filteredItems = itemsFilter.filter((el) => {
+
+		function isInPrice () {
+			if(filters.price[0] != '' && filters.price[0] != undefined
+			&& filters.price[1] != '' && filters.price[1] != undefined){
+				if(filters.price[0] <= el.price 
+				&& filters.price[1] >= el.price){
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInMaint () {
+			if(filters.maintainance[0] != '' 
+				&& filters.maintainance[0] != undefined
+				&& filters.maintainance[1] != undefined
+				&& filters.maintainance[1] != ''){
+				if(filters.maintainance[0] <= el.maintainance
+				&& filters.maintainance[1] >= el.maintainance){
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInOrigin () {
+			if(filters.originalLife[0] != '' 
+				&& filters.originalLife[0] != undefined
+				&& filters.originalLife[1] != undefined
+				&& filters.originalLife[1] != ''){
+				if (parseFloat(filters.originalLife[0]) 
+					<= ((el.originalLife[0] + el.originalLife[1]) / 2)
+					&& parseFloat(filters.originalLife[1]) 
+					>= ((el.originalLife[0] + el.originalLife[1]) / 2)){
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInClone () {
+			if(filters.cloneLife[0] != '' 
+				&& filters.cloneLife[0] != undefined
+				&& filters.cloneLife[1] != undefined
+				&& filters.cloneLife[1] != ''){
+				if (parseFloat(filters.cloneLife[0]) 
+					<= ((el.clonelLife[0] + el.clonelLife[1]) / 2)
+					&& parseFloat(filters.clonelLife[1]) 
+					>= ((el.clonelLife[0] + el.clonelLife[1]) / 2)){
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInDanger () {
+			if(filters.danger != undefined){
+				if(filters.danger >= el.danger){
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInPeriod() {
+			if(filters.period != "" && filters.period != undefined){
+				return filters.period === el.period;
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInPolitic() {
+			if(filters.politic != "" && filters.politic != undefined){
+				return filters.politic === el.politic;
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInMovement() {
+			if(filters.movement != "" && filters.movement != undefined){
+				return filters.movement === el.movement;
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInCountry() {
+			if(filters.country != "" && filters.country != undefined){
+				return filters.country === el.country;
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInPeriod() {
+			if(filters.period != "" && filters.period != undefined){
+				return filters.period === el.period;
+			} else {
+				return undefined;
+			}
+		};
+
+		function isInSizes() {
+			if(filters.sizes != "" && filters.sizes != undefined){
+				let qSizes = el.sizes.filter((el) => {
+					return el === filters.sizes;
+				});
+				return qSizes.length > 0;
+			} else {
+				return undefined
+			}
+		};
+
+		function isInGen() {
+			if(filters.gen!= "" && filters.gen != undefined){
+				return filters.gen === el.gen;
+			} else {
+				return undefined;
+			}
+		};
+
+		let filterChecks = [
+			isInPrice(), 
+			isInClone(), 
+			isInMaint(), 
+			isInOrigin(),
+			isInDanger(),
+			isInPeriod(),
+			isInPolitic(),
+			isInMovement(),
+			isInCountry(),
+			isInSizes(),
+			isInGen
+		];
+		console.log(filterChecks);
+	});
+
+	console.log(filteredItems);
+	console.log(filters);
+	itemsFilter = filteredItems;
+	updateItems();
 }
 
 updateItems = function () {
