@@ -321,7 +321,8 @@ updateItems = function () {
 
 		img.setAttribute("src", imgPathFinal);
 		article.append(img);
-		img.setAttribute("heigth", "100%");
+		img.setAttribute("height", "100%");
+		img.style.objectFit = "cover";
 		img.setAttribute("width", "45%");
 
 		let section = document.createElement("section");
