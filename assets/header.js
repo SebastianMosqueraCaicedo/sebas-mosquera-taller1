@@ -91,3 +91,9 @@ function genHeader(isRoot) {
 
 	document.body.prepend(header);
 }
+
+if (document.location.pathname === "/"){
+	genHeader(true);
+} else {
+	genHeader(false);
+}
