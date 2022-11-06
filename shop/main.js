@@ -187,9 +187,9 @@ filterItems = function() {
 				&& filters.cloneLife[1] != undefined
 				&& filters.cloneLife[1] != ''){
 				if (parseFloat(filters.cloneLife[0]) 
-					<= ((el.clonelLife[0] + el.clonelLife[1]) / 2)
-					&& parseFloat(filters.clonelLife[1]) 
-					>= ((el.clonelLife[0] + el.clonelLife[1]) / 2)){
+					<= ((el.cloneLife[0] + el.cloneLife[1]) / 2)
+					&& parseFloat(filters.cloneLife[1]) 
+					>= ((el.cloneLife[0] + el.cloneLife[1]) / 2)){
 					return true;
 				} else {
 					return false;
